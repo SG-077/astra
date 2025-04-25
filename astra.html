@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Astra - Electronics Components Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/toast.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <img src="images/astra_logo.jpeg" alt="ASTRA Logo" class="logo" />
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search products..." />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/background.webp') center/cover no-repeat;">
+    <div class="hero-text">
+      <h1>Welcome to <span>ASTRA</span></h1>
+      <p>Your one-stop store for all futuristic electronic components.</p>
+      <a href="#products" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="products" class="product-section">
+    <h2 class="section-title">Featured Components</h2>
+    <div class="product-grid" id="product-list"></div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ASTRA Electronics. All rights reserved.</p>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Item added to cart!</div>
+
+  <script>
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2000);
+    }
+  </script>
+    
+
+  <!-- JS -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

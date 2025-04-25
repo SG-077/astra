@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- FontAwesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="images/astra_logo.jpeg" alt="ASTRA Logo" class="logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="astra.html">Home</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you. Please reach out for any inquiries or feedback.</p>
+
+        <!-- Form submission handled by FormSubmit -->
+        <form action="https://formsubmit.co/astra.io.in@gmail.com" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        
+            <!-- Optional hidden fields -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            
+            <!-- Redirect to the 'thankyou.html' page after successful submission -->
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+        
+            <button type="submit">Send Message</button>
+        </form>
+        
+
+        <div class="contact-details">
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Our Address</h3>
+                <p>Phagwara, Punjab, India</p>
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>astra.io.in@gmail.com</p>
+            </div>
+            <div>
+                <i class="fas fa-phone-alt"></i>
+                <h3>Phone</h3>
+                <p>+91 9706508938  +91 7008937872  +91 9045996369</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 ASTRA Electronics. All rights reserved.</p>
+        <a href="#">Privacy Policy</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment - ASTRA</title>
+  <link rel="stylesheet" href="css/payment.css" />
+</head>
+<body>
+
+  <div class="payment-container">
+    <h1>Scan & Pay</h1>
+    <p>Please scan the QR code or use the UPI ID below to complete your payment.</p>
+
+    <div class="qr-box">
+      <img src="images/payment.jpeg" alt="QR Code for UPI Payment" class="qr-img">
+      <p class="upi-id">UPI ID: <strong>sarthakgaira2005@okicici</strong></p>
+    </div>
+
+    <!-- <a href="thankyou.html" class="confirm-btn">I've Paid</a> -->
+  </div>
+  <button id="confirm-payment">I Have Paid</button>
+  </div>
+
+  <script>
+    document.getElementById("confirm-payment").addEventListener("click", () => {
+      // Clear the cart stored in localStorage
+      localStorage.removeItem("cart");
+      
+      // Redirect to success page
+      window.location.href = "afterpayment.html";
+    });
+  </script>
+
+</body>
+</html>
