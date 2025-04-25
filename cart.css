@@ -1,0 +1,142 @@
+/* cart.css */
+
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .main-header {
+    background-color: #121212;
+    padding: 20px 30px;
+    border-bottom: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-header h1 {
+    font-size: 2rem;
+    color: #00ffff;
+  }
+  
+  .main-header nav a {
+    color: #ff00ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .main-header nav a:hover {
+    color: #00ffff;
+  }
+  
+  /* Cart container */
+  #cart-container {
+    margin-top: 30px;
+  }
+  
+  .cart-item {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+    position: relative;
+  }
+  
+  .cart-item img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fff;
+  }
+  
+  .cart-item h3 {
+    font-size: 1.2rem;
+    color: #0ff;
+    margin-bottom: 5px;
+  }
+  
+  .cart-item p {
+    color: #ccc;
+    font-size: 1rem;
+  }
+  
+  /* Remove Icon (Cross) */
+  .remove-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .remove-icon:hover {
+    color: #ff4444;
+    transform: scale(1.2);
+  }
+  
+  /* Total & buttons */
+  main > p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #0ff;
+  }
+  
+  button {
+    margin: 10px 10px 0 0;
+    padding: 12px 25px;
+    background: #00ffff;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    background: #ff00ff;
+    color: #fff;
+  }
+  
+/* Hide loader by default */
+.loader {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #00ffff;
+    font-size: 1.2rem;
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cart-item img {
+      width: 100%;
+    }
+  }
+  
